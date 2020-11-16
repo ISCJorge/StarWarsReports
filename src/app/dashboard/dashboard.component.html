@@ -1,0 +1,52 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+                <label for="sel1">Seleccione Ordenador:</label>
+                <select class="form-control" id="selectOrder" (change)="toogleSelect()">
+                  <option value="name">Nombre</option>
+                  <option value="mass">Peso</option>
+                  <option value="height">Altura</option>
+                </select>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          
+          <table class="table">
+            <thead style="background-color: #f44336; color: #fff;">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Peso</th>
+                <th scope="col">Altura</th>
+                <th scope="col">Color de Cabello</th>
+                <th scope="col">Nacimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let people of dataPeoples">
+                <th scope="row">{{people.name}}</th>
+                <td>{{people.mass}}</td>
+                <td>{{people.height}}</td>
+                <td>{{people.hair_color}}</td>
+                <td>{{people.birth_year}}</td>
+              </tr>
+            </tbody>
+          </table>   
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" (click)="changePage(1)">1</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(2)">2</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(3)">3</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(4)">4</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(5)">5</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(6)">6</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(7)">7</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(8)">8</a></li>
+            <li class="page-item"><a class="page-link" (click)="changePage(9)">9</a></li>
+        </ul>
+        </div>
+      </div>
+  </div>
+</div>

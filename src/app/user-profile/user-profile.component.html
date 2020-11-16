@@ -1,0 +1,49 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="sel1">Seleccione Personaje:</label>
+          <select class="form-control" id="selectPeople" (change)="toogleSelect()">
+            <option *ngFor="let people of lstPeople" value="{{people.url}}">{{people.name}}</option>
+          </select>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">{{Nombre}}</h4>
+                      <p class="card-category"></p>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="row">
+                              <div class="col-md-4">
+                                    <label><b>Peso: </b>{{txtPeso}}</label>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <label><b>Altura: </b>{{txtAltura}}</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <label><b>Color de Cabello: </b>{{txtColorCabello}}</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <label><b>Nacimiento: </b>{{txtNacimiento}}</label>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
